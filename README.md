@@ -1,5 +1,7 @@
 # Projeto
 
+**Descritivo:** Leia o arquivo _challenge.pdf_ na raiz do projeto.
+
 Projeto desenvolvido em Node.js e banco de dados Redis com distribuição via containers Docker.
 
 # Dependências
