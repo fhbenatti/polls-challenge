@@ -1,0 +1,14 @@
+{
+  "mocha.options": {
+    "require": "ts-node/register",
+    "exit": "1"
+  },
+  "mocha.requires": ["ts-node/register"],
+  "mocha.files.glob": "src/**/*.test.ts",
+  "mocha.env": {
+    "NODE_ENV": "test"
+  },
+  "mocha.sideBarOptions": {
+    "showDebugTestStatus": false
+  }
+}
