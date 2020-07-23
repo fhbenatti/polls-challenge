@@ -1,0 +1,19 @@
+version: '3'
+services:
+  service-poll:
+    build: ./
+    image: service-poll:latest
+    container_name: service-poll
+    networks:
+      - poll-net
+    ports:
+      - '3000:3000'
+    environment:
+      DB_HOST: redis://service-poll-db:6379
+  service-poll-db:
+    image: redis:alpine
+    container_name: service-poll-db
+    networks:
+      - poll-net
+networks:
+  ? poll-net

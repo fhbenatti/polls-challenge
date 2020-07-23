@@ -1,0 +1,43 @@
+{
+  "name": "service-poll",
+  "version": "1.0.0",
+  "description": "Poll",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/tslint/bin/tslint --project .",
+    "w-lint": "node ./node_modules/tslint/bin/tslint --project .",
+    "test": "./node_modules/mocha/bin/mocha --require ts-node/register 'src/**/!(*.dev).test.ts' --exit",
+    "build": "./node_modules/typescript/bin/tsc",
+    "w-build": "node ./node_modules/typescript/bin/tsc",
+    "start": "node src/index.js",
+    "build-docker-image": "npm run build && docker build --rm -f \"Dockerfile\" -t service-poll:latest .",
+    "w-build-docker-image": "npm run w-build && docker build --rm -f \"Dockerfile\" -t service-poll:latest ."
+  },
+  "author": "Fábio Benatti",
+  "license": "ISC",
+  "dependencies": {
+    "@types/dotenv": "^6.1.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.5",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^9.6.26",
+    "chai": "^4.2.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "mocha": "^5.2.0",
+    "prettier": "1.14.3",
+    "prettier-tslint": "^0.4.0",
+    "ts-node": "~6",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^2.9.2"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint-config-standard"],
+  "jsRules": {},
+  "rules": {
+    "no-console": false,
+    "no-shadowed-variable": false,
+    "trailing-comma": false,
+    "object-literal-sort-keys": false,
+    "radix": false,
+    "eofline": false,
+    "ordered-imports": false,
+    "member-ordering": false,
+    "only-arrow-functions": false,
+    "no-floating-promises": false
+  },
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": ["src/**/*.js"]
+  }
+}
